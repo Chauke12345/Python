@@ -1,0 +1,66 @@
+class Restaurant:
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+
+    def describe_restaurant(self):
+        print(f"Restaurant name: {self.restaurant_name}")
+        print(f"Cuisine type: {self.cuisine_type}")
+
+    def open_restaurant(self):
+        print(f"{self.restaurant_name} is now open!")
+
+# Create an instance
+restaurant = Restaurant("Food Palace", "Italian")
+
+# Print attributes individually
+print(restaurant.restaurant_name)
+print(restaurant.cuisine_type)
+
+# Call methods
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
+
+# Create three instances
+restaurant1 = Restaurant("Food Palace", "Italian")
+restaurant2 = Restaurant("Spice Hub", "Indian")
+restaurant3 = Restaurant("Sushi World", "Japanese")
+
+# Call describe_restaurant() for each
+restaurant1.describe_restaurant()
+print()
+
+restaurant2.describe_restaurant()
+print()
+
+restaurant3.describe_restaurant()
+
+class User:
+    def __init__(self, first_name, last_name, age, location):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.location = location
+
+    def describe_user(self):
+        print(f"User: {self.first_name} {self.last_name}")
+        print(f"Age: {self.age}")
+        print(f"Location: {self.location}")
+
+    def greet_user(self):
+        print(f"Hello, {self.first_name}! Welcome back.\n")
+
+# Create instances
+user1 = User("Eddie", "Bazooka", 21, "Johannesburg")
+user2 = User("Eddy", "Domiguez", 25, "Cape Town")
+user3 = User("Ed", "Brown", 30, "Durban")
+
+# Call methods for each user
+user1.describe_user()
+user1.greet_user()
+
+user2.describe_user()
+user2.greet_user()
+
+user3.describe_user()
+user3.greet_user()
