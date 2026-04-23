@@ -1,0 +1,28 @@
+def make_shirt(size, message):
+    print(f"The shirt size is {size} and the message printed on it is: '{message}'.")
+
+# Call using positional arguments
+make_shirt("M", "Keep Calm and Code On")
+
+# Call using keyword arguments
+make_shirt(size="L", message="Python is Fun!")
+
+def make_shirt(size="L", message="I love Python"):
+    print(f"The shirt size is {size} and the message printed on it is: '{message}'.")
+
+# Large shirt with default message
+make_shirt()
+
+# Medium shirt with default message
+make_shirt(size="M")
+
+# Shirt with any size and a different message
+make_shirt(size="S", message="Code Every Day")
+
+def describe_city(city, country="Iceland"):
+    print(f"{city} is in {country}.")
+
+# Three function calls
+describe_city("Reykjavik")          # Uses default country
+describe_city("Akureyri")           # Uses default country
+describe_city("Johannesburg", "South Africa")  # Different country

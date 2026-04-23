@@ -1,0 +1,44 @@
+def make_sandwich(*items):
+    print("Making a sandwich with the following items:")
+    for item in items:
+        print(f"- {item}")
+    print()
+
+# Function calls with different number of arguments
+make_sandwich("ham", "cheese")
+make_sandwich("lettuce", "tomato", "mayo")
+make_sandwich("chicken", "bacon", "avocado", "cheese")
+
+def build_profile(first, last, **user_info):
+    profile = {
+        "first_name": first,
+        "last_name": last
+    }
+    for key, value in user_info.items():
+        profile[key] = value
+    return profile
+
+# Build your profile
+user_profile = build_profile(
+    "Eddie",
+    "Bazooka",
+    location="Johannesburg",
+    age=21,
+    field="Software Development"
+)
+
+print(user_profile)
+
+def make_car(manufacturer, model, **car_info):
+    car = {
+        "manufacturer": manufacturer,
+        "model": model
+    }
+    for key, value in car_info.items():
+        car[key] = value
+    return car
+
+# Function call
+car = make_car("audi", "outback", color="red", tow_package=True)
+
+print(car)
